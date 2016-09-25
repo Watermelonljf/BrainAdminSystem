@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:jsp="http://java.sun.com/xml/ns/javaee/jsp" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <display-name></display-name>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>loginServlet</servlet-name>
+    <servlet-class>com.adminsystem.UserServlet.AdminLoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>loginServlet</servlet-name>
+    <url-pattern>/User/loginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>RegServlet</servlet-name>
+    <servlet-class>com.adminsystem.UserServlet.AdminRegisterServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoginOut</servlet-name>
+    <servlet-class>com.adminsystem.UserServlet.AdminLoginOutServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ChangePassword</servlet-name>
+    <servlet-class>com.adminsystem.UserServlet.ChangePasswordServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AddGoodServlet</servlet-name>
+    <servlet-class>com.adminsystem.UserServlet.AddGoodServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>getGoodsServlet</servlet-name>
+    <servlet-class>com.adminsystem.UserServlet.getGoodsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>deleteGoods</servlet-name>
+    <servlet-class>com.adminsystem.UserServlet.deleteGoodsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>GetGoodsInfoServlet</servlet-name>
+    <servlet-class>com.adminsystem.UserServlet.GetGoodsInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpdateGoodsServlet</servlet-name>
+    <servlet-class>com.adminsystem.UserServlet.UpdateGoodsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>GetUserInfoSrevlet</servlet-name>
+    <servlet-class>com.adminsystem.UserServlet.GetUserInfoSrevlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>registerServlet</servlet-name>
+    <servlet-class>com.adminsystem.BrainUserServlet.registerServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegServlet</servlet-name>
+    <url-pattern>/User/RegServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoginOut</servlet-name>
+    <url-pattern>/User/LoginOut</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ChangePassword</servlet-name>
+    <url-pattern>/User/ChangePassword</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddGoodServlet</servlet-name>
+    <url-pattern>/Admin/AddGoodServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>getGoodsServlet</servlet-name>
+    <url-pattern>/Admin/getGoodsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>deleteGoods</servlet-name>
+    <url-pattern>/Admin/deleteGoods</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetGoodsInfoServlet</servlet-name>
+    <url-pattern>/Admin/GetGoodsInfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateGoodsServlet</servlet-name>
+    <url-pattern>/Admin/UpdateGoodsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetUserInfoSrevlet</servlet-name>
+    <url-pattern>/Admin/GetUserInfoSrevlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>registerServlet</servlet-name>
+    <url-pattern>/UserServlet/registerServlet</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <filter>
+    <filter-name>CheckLoginFilter</filter-name>
+    <filter-class>com.adminsystem.Util.CheckLoginFilter</filter-class>
+    <init-param>
+      <param-name>checkSessionKey</param-name>
+      <param-value>loginuser</param-value>
+    </init-param>
+    <init-param>
+      <param-name>redirectURL</param-name>
+      <param-value>/loginnow.jsp</param-value>
+    </init-param>
+    <init-param>
+      <param-name>notCheckURLList</param-name>
+      <param-value>/Error/Error404.jsp;/loginnow.jsp;/Register.jsp;</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>CheckLoginFilter</filter-name>
+    <url-pattern>*.jsp</url-pattern>
+  </filter-mapping>
+  <jsp-config>
+    <taglib>
+      <taglib-uri>/Mytag</taglib-uri>
+      <taglib-location>/WEB-INF/Mytag.tld</taglib-location>
+    </taglib>
+    <jsp-property-group>
+      <description>   
+	  Special property group for JSP Configuration HTML   
+	  example.   
+	  </description>
+      <display-name>JSPConfiguration</display-name>
+      <url-pattern>*.jsp</url-pattern>
+      <el-ignored>false</el-ignored>
+      <page-encoding>UTF-8</page-encoding>
+      <scripting-invalid>false</scripting-invalid>
+      <include-prelude></include-prelude>
+      <include-coda></include-coda>
+    </jsp-property-group>
+  </jsp-config>
+</web-app>
